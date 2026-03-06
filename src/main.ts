@@ -43,7 +43,8 @@ async function main(): Promise<void> {
     }
 
     // Enumerate environments
-    util.sectionHeading("Enumerate Bonsai environments");
+    core.info("Sanity check...")
+    util.sectionHeading("Enumerate Bonsai environments [DEV]");
     let environments: BonsaiEnvironment[] = [];
     {
         let hadErrors = false;
