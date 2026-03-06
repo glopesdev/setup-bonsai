@@ -251,7 +251,7 @@ export class BonsaiEnvironment {
         }
 
         if (errorCode !== 0) {
-            core.error(`Failed to bootstrap '${this.relativePath}', Bonsai exited with error ${errorCode}.`);
+            core.warning(`Failed to bootstrap '${this.relativePath}', Bonsai exited with error ${errorCode}.`);
         }
 
         return errorCode === 0;
@@ -282,7 +282,7 @@ export class BonsaiEnvironment {
         }
 
         if (errorCode !== 0) {
-            core.error(`Failed to bootstrap '${this.relativePath}', Bonsai exited with error ${errorCode}.`);
+            core.warning(`Failed to bootstrap '${this.relativePath}', Bonsai exited with error ${errorCode}.`);
         }
 
         return errorCode === 0;
