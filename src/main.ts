@@ -170,7 +170,8 @@ async function main(): Promise<void> {
             await environment.capturePackages(cache.packageCacheRoot);
         }
 
-        if (!allSuccessful) {
+        // Fail early only if there are no packages to inject
+        if (!allSuccessful && injectPackages.size == 0) {
             core.setFailed("Failed to restore one or more Bonsai environments.");
             return;
         }
